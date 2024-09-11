@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/weatherFragment"
+    android:paddingTop="20dp"
+    tools:context=".WeatherFragment">
+
+    <FrameLayout
+        android:id="@+id/weatherFrame"
+        android:layout_width="382dp"
+        android:layout_height="289dp"
+        android:layout_centerHorizontal="true"
+        android:background="#D3F8E2"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_rainy" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/weatherInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/weatherFrame"
+        android:layout_alignTop="@id/weatherFrame"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="12°C\nCloudy"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/weatherInfo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/weatherFrame"
+        android:layout_alignTop="@id/weatherFrame"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Paris"
+        android:textSize="18sp" />
+
+</RelativeLayout>
