@@ -25,6 +25,7 @@ public class WeatherActivity extends AppCompatActivity {
         ForecastFragment firstFragment = new ForecastFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.main, firstFragment).commit();
 
+
     }
     private static final String TAG = "WeatherActivity";
 
