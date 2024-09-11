@@ -12,5 +12,5 @@ Student Info
 
 * Name: Ho Thanh Thuy Tien
 * ID: 22BI13419
-* Group ID: *Your Group ID here*
-* Project Name: *Your Project Name here*
+* Group ID: 6
+* Project Name: Stock Dashboard
