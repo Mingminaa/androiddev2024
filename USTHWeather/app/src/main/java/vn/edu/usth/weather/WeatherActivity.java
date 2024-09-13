@@ -7,7 +7,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 import android.util.Log;
+
+import com.google.android.material.tabs.TabLayout;
 
 
 public class WeatherActivity extends AppCompatActivity {
@@ -22,8 +27,16 @@ public class WeatherActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        ForecastFragment firstFragment = new ForecastFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.main, firstFragment).commit();
+//        ForecastFragment firstFragment = new ForecastFragment();
+//        getSupportFragmentManager().beginTransaction().add(R.id.main, firstFragment).commit();
+
+        PagerAdapter adapter = new HomeFragmentPagerAdapter(getSupportFragmentManager());
+        ViewPager pager = (ViewPager) findViewById(R.id.viewPager);
+        pager.setOffscreenPageLimit(3);
+        pager.setAdapter(adapter);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        tabLayout.setupWithViewPager(pager);
 
 
     }
