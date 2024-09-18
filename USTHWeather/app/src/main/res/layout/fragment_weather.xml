@@ -12,7 +12,7 @@
         android:layout_width="382dp"
         android:layout_height="289dp"
         android:layout_centerHorizontal="true"
-        android:background="#D3F8E2"
+        android:background="@color/green_pastel"
         android:padding="20dp">
 
         <ImageView
@@ -31,7 +31,7 @@
         android:layout_alignTop="@id/weatherFrame"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:text="12°C\nCloudy"
+        android:text="@string/weather"
         android:textSize="18sp" />
 
     <TextView
@@ -42,7 +42,7 @@
         android:layout_alignTop="@id/weatherFrame"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
-        android:text="Paris"
+        android:text="@string/location"
         android:textSize="18sp" />
 
 </RelativeLayout>

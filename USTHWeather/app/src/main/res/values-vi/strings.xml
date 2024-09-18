@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Thời tiết USTH</string>
+    <string name="mon">Thứ Hai</string>
+    <string name="scatter">Mưa rào</string>
+    <string name="scatter_temp">22C-27C</string>
+    <string name="tue">Thứ Ba</string>
+    <string name="thunder">Dông bão</string>
+    <string name="thunder_temp">21C-22C</string>
+    <string name="wed">Thứ Tư</string>
+    <string name="cloudy">Nhiều Mây</string>
+    <string name="cloudy_temp">21C-25C</string>
+    <string name="thurs">Thứ Năm</string>
+    <string name="clearsky">Quang đãng</string>
+    <string name="clear_temp">20C-24C</string>
+    <string name="fri">Thứ Sáu</string>
+    <string name="sunny">Nhiều nắng</string>
+    <string name="sun_temp">25C-29C</string>
+    <string name="sat">Thứ Bảy</string>
+    <string name="sun">Chủ Nhật</string>
+    <string name="weather">12°C\nNhiều Mây</string>
+    <string name="location">Pa-ri</string>
+</resources>

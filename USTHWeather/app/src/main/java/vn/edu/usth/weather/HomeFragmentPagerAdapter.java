@@ -23,6 +23,7 @@ public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return PAGE_COUNT;
     }
+
     @Override
     public Fragment getItem(int page) {
         // returns an instance of Fragment corresponding to the specified page
