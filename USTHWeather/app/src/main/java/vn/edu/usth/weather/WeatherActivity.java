@@ -1,5 +1,8 @@
 package vn.edu.usth.weather;
 
+import static java.security.AccessController.getContext;
+
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -38,6 +41,9 @@ public class WeatherActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(pager);
 
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.music);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
 
     }
     private static final String TAG = "WeatherActivity";
