@@ -3,6 +3,7 @@ package vn.edu.usth.weather;
 import static java.security.AccessController.getContext;
 
 import android.media.MediaPlayer;
+import static android.app.PendingIntent.getActivity;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -17,12 +18,16 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.tabs.TabLayout;
 
 
 public class WeatherActivity extends AppCompatActivity {
+    private RefreshHandler refreshHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +57,16 @@ public class WeatherActivity extends AppCompatActivity {
         Toolbar myToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
 
+        final Handler handler = new Handler(Looper.getMainLooper()) {
+            @Override
+            public void handleMessage(Message msg) {
+                String content = msg.getData().getString("server_response");
+                Toast.makeText(WeatherActivity.this, content, Toast.LENGTH_SHORT).show();
+            }
+        };
+
+        refreshHandler = new RefreshHandler(handler);
+
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -62,7 +77,7 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_refresh:
-                Toast.makeText(this, "Refresh", Toast.LENGTH_SHORT).show();
+                refreshHandler.NetworkRequest();
                 return true;
             default:
                 super.onOptionsItemSelected(item);
